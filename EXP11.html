@@ -1,0 +1,27 @@
+# Accessibility
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 11 - Accessibility</title>
+</head>
+<body>
+    <!-- Skip link for keyboard/screen-reader users -->
+    <a href="#main-content">Skip to main content</a>
+
+    <header role="banner">
+        <h1>Accessible Web Page</h1>
+    </header>
+
+    <main id="main-content">
+        <img src="https://placeholder.com" alt="College logo showing an open book and torch">
+        
+        <form aria-label="Search Form">
+            <label for="search-input">Search Topics:</label>
+            <input type="text" id="search-input" name="q" aria-required="true">
+            <button type="submit" aria-label="Submit search query">Search</button>
+        </form>
+    </main>
+</body>
+</html>
