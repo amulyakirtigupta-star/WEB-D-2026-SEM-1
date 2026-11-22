@@ -1,0 +1,106 @@
+# Mini Project: Accessible Student Admission Page
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 18 - Student Admission Portal</title>
+</head>
+<body>
+    <a href="#admission-form">Skip to Admission Form</a>
+
+    <header>
+        <h1>ABC Institute of Technology</h1>
+        <p>Academic Session 2026–2027 | Online Admission Portal</p>
+        <nav aria-label="Primary Navigation">
+            <ul>
+                <li><a href="#courses">Courses Offered</a></li>
+                <li><a href="#admission-form">Apply Online</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="courses">
+            <h2>Available Programs & Fee Structure</h2>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <caption><b>Undergraduate B.Tech Programs</b></caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Program</th>
+                        <th scope="col">Duration</th>
+                        <th scope="col">Annual Fee</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>B.Tech Computer Science</td>
+                        <td>4 Years</td>
+                        <td>&#8377; 1,20,000</td>
+                    </tr>
+                    <tr>
+                        <td>B.Tech Artificial Intelligence</td>
+                        <td>4 Years</td>
+                        <td>&#8377; 1,35,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="admission-form">
+            <h2>Student Admission Form</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>1. Applicant Information</legend>
+                    
+                    <label for="student-name">Full Name (as per 10th Certificate) *:</label><br>
+                    <input type="text" id="student-name" name="student_name" required aria-required="true"><br><br>
+
+                    <label for="student-email">Email Address *:</label><br>
+                    <input type="email" id="student-email" name="student_email" required aria-required="true"><br><br>
+
+                    <label for="student-phone">Mobile Number (10 digits) *:</label><br>
+                    <input type="tel" id="student-phone" name="student_phone" pattern="[0-9]{10}" required aria-required="true"><br><br>
+
+                    <label for="student-dob">Date of Birth *:</label><br>
+                    <input type="date" id="student-dob" name="student_dob" required aria-required="true"><br><br>
+                </fieldset>
+                <br>
+
+                <fieldset>
+                    <legend>2. Academic & Course Selection</legend>
+                    
+                    <label for="course-select">Preferred B.Tech Branch *:</label><br>
+                    <select id="course-select" name="course" required aria-required="true">
+                        <option value="">-- Choose a Branch --</option>
+                        <option value="cse">Computer Science & Engineering</option>
+                        <option value="ai">Artificial Intelligence & ML</option>
+                    </select><br><br>
+
+                    <label for="percentage">Class 12th Aggregate (%) *:</label><br>
+                    <input type="number" id="percentage" name="percentage" min="60" max="100" step="0.1" required aria-required="true"><br><br>
+
+                    <label for="photo">Upload Passport Photo (JPG/PNG) *:</label><br>
+                    <input type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png" required aria-required="true"><br><br>
+
+                    <label for="remarks">Residential Address *:</label><br>
+                    <textarea id="remarks" name="address" rows="3" cols="40" required aria-required="true"></textarea>
+                </fieldset>
+                <br>
+
+                <input type="checkbox" id="declaration" required aria-required="true">
+                <label for="declaration">I hereby declare that all information provided is true.</label><br><br>
+
+                <button type="submit">Submit Application</button>
+                <button type="reset">Clear Form</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 ABC Institute of Technology. Need help? <a href="mailto:admissions@abcit.edu.in">Email Admissions Office</a></p>
+    </footer>
+</body>
+</html>
