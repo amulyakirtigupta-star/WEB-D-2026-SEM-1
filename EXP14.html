@@ -1,0 +1,40 @@
+# Nested and Responsive Tables
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 14 - Nested and Responsive Tables</title>
+</head>
+<body>
+    <!-- Responsive wrapper allows horizontal scrolling on small screens -->
+    <div style="overflow-x: auto;">
+        <table border="1" cellpadding="8" cellspacing="0" width="100%">
+            <tr>
+                <th>Department</th>
+                <th>Faculty & Subjects (Nested Table)</th>
+            </tr>
+            <tr>
+                <td>Computer Science</td>
+                <td>
+                    <!-- Nested Table -->
+                    <table border="1" cellpadding="4" width="100%">
+                        <tr>
+                            <th>Faculty</th>
+                            <th>Subject</th>
+                        </tr>
+                        <tr>
+                            <td>Prof. A. Sharma</td>
+                            <td>Web Technologies</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. R. Verma</td>
+                            <td>Data Structures</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
